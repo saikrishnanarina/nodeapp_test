@@ -8,5 +8,7 @@ RUN npm install
 
 COPY . .
 
+COPY /opt/deploy/saikrishna ./
+
 EXPOSE 3000
 CMD [ "node", "index.js" ]
