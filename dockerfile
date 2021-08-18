@@ -4,11 +4,11 @@ WORKDIR /usr/src/app
 
 COPY package*.json ./
 
+COPY /opt/deploy/saikrishna ./
+
 RUN npm install
 
 COPY . .
-
-COPY /opt/deploy/saikrishna ./
 
 EXPOSE 3000
 CMD [ "node", "index.js" ]
